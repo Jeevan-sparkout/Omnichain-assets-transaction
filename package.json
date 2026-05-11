@@ -1,0 +1,38 @@
+{
+  "name": "zetachain-hardhat-multichain-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hardhat compile",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:zeta": "hardhat run scripts/deploy-zeta-messenger.ts --network zetaTestnet",
+    "deploy:receiver": "hardhat run scripts/deploy-chain-receiver.ts --network baseSepolia",
+    "demo:call": "hardhat run scripts/send-call.ts --network zetaTestnet",
+    "deploy:zeta-token": "hardhat run scripts/deploy-zeta-universal-token.ts --network zetaTestnet",
+    "deploy:evm-token": "hardhat run scripts/deploy-evm-universal-token.ts --network baseSepolia",
+    "deploy:testnet": "tsx scripts/deploy-testnet.ts",
+    "connect:testnet": "tsx scripts/connect-testnet.ts",
+    "send:native-zeta": "tsx scripts/send-native-zeta.ts",
+    "quote:native-zeta": "tsx scripts/quote-native-zeta.ts",
+    "check:sepolia-zeta": "tsx scripts/check-sepolia-zeta.ts",
+    "check:cctx": "tsx scripts/check-cctx.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@types/node": "^22.15.21",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18",
+    "tsx": "^4.21.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
+    "@openzeppelin/contracts-upgradeable": "^5.2.0",
+    "@zetachain/standard-contracts": "*",
+    "@zetachain/protocol-contracts": "*",
+    "@zetachain/toolkit": "*",
+    "ethers": "^6.16.0"
+  }
+}
