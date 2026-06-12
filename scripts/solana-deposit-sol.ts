@@ -96,16 +96,26 @@ async function main() {
   });
 
   const transaction = new Transaction().add(instruction);
+  const { blockhash } = await connection.getLatestBlockhash("confirmed");
+  transaction.recentBlockhash = blockhash;
+  transaction.feePayer = payer.publicKey;
 
-  console.log("Sending transaction to Solana Devnet...");
-  const signature = await sendAndConfirmTransaction(connection, transaction, [payer], {
-    commitment: "confirmed",
-    preflightCommitment: "confirmed",
-  });
-
-  console.log("🎉 Deposit Transaction Sent!");
-  console.log("Transaction Signature:", signature);
-  console.log(`Track on Solana Explorer: https://explorer.solana.com/tx/${signature}?cluster=devnet`);
+  console.log("Signing and sending transaction to Solana Devnet (skipping preflight)...");
+  try {
+    const signature = await connection.sendTransaction(transaction, [payer], {
+      skipPreflight: true,
+    });
+    console.log("🎉 Deposit Transaction Sent!");
+    console.log("Transaction Signature (Hash):", signature);
+    console.log(`Track on Solana Explorer: https://explorer.solana.com/tx/${signature}?cluster=devnet`);
+    
+    console.log("Waiting for confirmation (this will likely fail/revert on-chain but register a tx hash)...");
+    const confirmation = await connection.confirmTransaction(signature, "confirmed");
+    console.log("Transaction confirmation result:", confirmation);
+  } catch (err: any) {
+    console.log("❌ Transaction sending failed!");
+    console.error("Error details:", err);
+  }
 }
 
 main().catch((err) => {

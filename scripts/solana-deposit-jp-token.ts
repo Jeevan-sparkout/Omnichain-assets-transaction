@@ -116,10 +116,9 @@ async function main() {
 
   const transaction = new Transaction().add(instruction);
 
-  console.log("Sending transaction to Solana Devnet...");
   const signature = await sendAndConfirmTransaction(connection, transaction, [payer], {
     commitment: "confirmed",
-    preflightCommitment: "confirmed",
+    skipPreflight: true,
   });
 
   console.log("🎉 Deposit Transaction Sent!");

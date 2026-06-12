@@ -33,7 +33,7 @@ async function main() {
   console.log(`Wallet: ${wallet.address}`);
   console.log("=========================================");
 
-  const amountIn = ethers.parseEther("0.1"); // Swap 0.1 ZETA
+  const amountIn = ethers.parseEther("6.0"); // Swap 6.0 ZETA
 
   console.log("\nStep 1: Checking/Wrapping WZETA...");
   const balanceBefore = await wzeta.balanceOf(wallet.address);

@@ -35,7 +35,10 @@ contract ZetaMessenger is Ownable, ReentrancyGuard {
     error EmptyReceiver();
     error EmptyMessage();
 
-    constructor(address gatewayAddress, address initialOwner) Ownable(initialOwner) {
+    constructor(
+        address gatewayAddress,
+        address initialOwner
+    ) Ownable(initialOwner) {
         gateway = IZetaChainGateway(gatewayAddress);
     }
 
@@ -50,11 +53,23 @@ contract ZetaMessenger is Ownable, ReentrancyGuard {
         uint256 amount,
         bytes calldata message
     ) external onlyGateway {
-        emit IncomingCall(context.chainID, context.senderEVM, context.sender, zrc20, amount, message);
+        emit IncomingCall(
+            context.chainID,
+            context.senderEVM,
+            context.sender,
+            zrc20,
+            amount,
+            message
+        );
     }
 
-    function quoteGasFee(address destinationGasZRC20, uint256 gasLimit) public view returns (uint256 gasFee) {
-        (, gasFee) = IZRC20(destinationGasZRC20).withdrawGasFeeWithGasLimit(gasLimit);
+    function quoteGasFee(
+        address destinationGasZRC20,
+        uint256 gasLimit
+    ) public view returns (uint256 gasFee) {
+        (, gasFee) = IZRC20(destinationGasZRC20).withdrawGasFeeWithGasLimit(
+            gasLimit
+        );
     }
 
     function callRemote(
@@ -69,24 +84,46 @@ contract ZetaMessenger is Ownable, ReentrancyGuard {
 
         gasFee = quoteGasFee(destinationGasZRC20, gasLimit);
 
-        IERC20(destinationGasZRC20).safeTransferFrom(msg.sender, address(this), gasFee);
+        IERC20(destinationGasZRC20).safeTransferFrom(
+            msg.sender,
+            address(this),
+            gasFee
+        );
         IERC20(destinationGasZRC20).forceApprove(address(gateway), gasFee);
 
-        IZetaChainGateway.CallOptions memory callOptions = IZetaChainGateway.CallOptions({
-            gasLimit: gasLimit,
-            isArbitraryCall: isArbitraryCall
-        });
+        IZetaChainGateway.CallOptions memory callOptions = IZetaChainGateway
+            .CallOptions({
+                gasLimit: gasLimit,
+                isArbitraryCall: isArbitraryCall
+            });
 
-        IZetaChainGateway.RevertOptions memory revertOptions = IZetaChainGateway.RevertOptions({
-            revertAddress: address(this),
-            callOnRevert: true,
-            abortAddress: address(0),
-            revertMessage: abi.encode(receiver, destinationGasZRC20, message),
-            onRevertGasLimit: gasLimit
-        });
+        IZetaChainGateway.RevertOptions memory revertOptions = IZetaChainGateway
+            .RevertOptions({
+                revertAddress: address(this),
+                callOnRevert: true,
+                abortAddress: address(0),
+                revertMessage: abi.encode(
+                    receiver,
+                    destinationGasZRC20,
+                    message
+                ),
+                onRevertGasLimit: gasLimit
+            });
 
-        gateway.call(receiver, destinationGasZRC20, message, callOptions, revertOptions);
+        gateway.call(
+            receiver,
+            destinationGasZRC20,
+            message,
+            callOptions,
+            revertOptions
+        );
 
-        emit OutgoingCallRequested(receiver, destinationGasZRC20, gasFee, gasLimit, message);
+        emit OutgoingCallRequested(
+            receiver,
+            destinationGasZRC20,
+            gasFee,
+            gasLimit,
+            message
+        );
     }
 }

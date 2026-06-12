@@ -26,7 +26,7 @@ async function main() {
   ];
 
   console.log("=========================================");
-  console.log("🔍 Checking ZRC-20 Balances on ZetaChain Athens-3");
+  console.log("Checking ZRC-20 Balances on ZetaChain Athens-3");
   console.log(`Address: ${wallet.address}`);
   console.log("=========================================");
 

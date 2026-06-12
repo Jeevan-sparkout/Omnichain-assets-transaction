@@ -1,0 +1,71 @@
+
+
+  CrossChainStaking
+    Local Staking
+      ✔ Should stake native gas token locally
+      ✔ Should stake ERC20 token locally
+      ✔ Should withdraw local native gas token
+      ✔ Should withdraw local ERC20 token
+    Cross-Chain Staking
+      ✔ Should initiate cross-chain stake with ERC20
+      ✔ Should initiate cross-chain stake with Native token
+      ✔ Should initiate cross-chain withdraw
+    Incoming ZetaChain Calls (onCall)
+      1) Should handle incoming stake message via onCall
+      2) Should handle incoming withdraw message via onCall (ERC20)
+      3) Should handle incoming withdraw message via onCall (Native)
+    Handling Reverts (onRevert)
+      ✔ Should restore tokens to user when a stakeCrossChain reverts
+      ✔ Should restore local balance when withdrawCrossChain reverts
+
+
+  9 passing (2s)
+  3 failing
+
+  1) CrossChainStaking
+       Incoming ZetaChain Calls (onCall)
+         Should handle incoming stake message via onCall:
+     NotImplementedError: Method 'HardhatEthersProvider.resolveName' is not implemented
+      at HardhatEthersProvider.resolveName (/home/sparkout/Desktop/learning/Zetachain/node_modules/@nomicfoundation/hardhat-ethers/src/internal/hardhat-ethers-provider.ts:364:11)
+      at HardhatEthersSigner.resolveName (/home/sparkout/Desktop/learning/Zetachain/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:168:26)
+      at resolveAddress (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/address/checks.ts:113:46)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/contract/contract.ts:172:60
+      at ParamType.#walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:779:24)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:771:45
+      at Array.forEach (<anonymous>)
+      at ParamType.#walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:770:20)
+      at ParamType.walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:797:24)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/contract/contract.ts:170:22
+
+  2) CrossChainStaking
+       Incoming ZetaChain Calls (onCall)
+         Should handle incoming withdraw message via onCall (ERC20):
+     NotImplementedError: Method 'HardhatEthersProvider.resolveName' is not implemented
+      at HardhatEthersProvider.resolveName (/home/sparkout/Desktop/learning/Zetachain/node_modules/@nomicfoundation/hardhat-ethers/src/internal/hardhat-ethers-provider.ts:364:11)
+      at HardhatEthersSigner.resolveName (/home/sparkout/Desktop/learning/Zetachain/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:168:26)
+      at resolveAddress (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/address/checks.ts:113:46)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/contract/contract.ts:172:60
+      at ParamType.#walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:779:24)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:771:45
+      at Array.forEach (<anonymous>)
+      at ParamType.#walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:770:20)
+      at ParamType.walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:797:24)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/contract/contract.ts:170:22
+
+  3) CrossChainStaking
+       Incoming ZetaChain Calls (onCall)
+         Should handle incoming withdraw message via onCall (Native):
+     NotImplementedError: Method 'HardhatEthersProvider.resolveName' is not implemented
+      at HardhatEthersProvider.resolveName (/home/sparkout/Desktop/learning/Zetachain/node_modules/@nomicfoundation/hardhat-ethers/src/internal/hardhat-ethers-provider.ts:364:11)
+      at HardhatEthersSigner.resolveName (/home/sparkout/Desktop/learning/Zetachain/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:168:26)
+      at resolveAddress (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/address/checks.ts:113:46)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/contract/contract.ts:172:60
+      at ParamType.#walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:779:24)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:771:45
+      at Array.forEach (<anonymous>)
+      at ParamType.#walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:770:20)
+      at ParamType.walkAsync (/home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/abi/fragments.ts:797:24)
+      at /home/sparkout/Desktop/learning/Zetachain/node_modules/ethers/src.ts/contract/contract.ts:170:22
+
+
+

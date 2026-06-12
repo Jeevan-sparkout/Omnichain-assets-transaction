@@ -1,0 +1,79 @@
+Starting multi-deployment to bscTestnet...
+Deploying with account: 0x44E6d4e316261D306B020516e4B2849464a10864
+
+--- Deploying Contract 1 of 5 ---
+✅ Contract 1 deployed to: 0xEB9CF75B2f032d4cC4A122F814cB73f95618e314
+Configuring 10 pools for Contract 1...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+
+--- Deploying Contract 2 of 5 ---
+✅ Contract 2 deployed to: 0x7CB465aC74B2Feae06cE78e6dC2395a165445353
+Configuring 10 pools for Contract 2...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+
+--- Deploying Contract 3 of 5 ---
+✅ Contract 3 deployed to: 0x3F46E4CD9375B92112EC12c7C5580B522250A77A
+Configuring 10 pools for Contract 3...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+
+--- Deploying Contract 4 of 5 ---
+✅ Contract 4 deployed to: 0xF6e4Db7106593B924b6b93bd3E765d28Fe161F0F
+Configuring 10 pools for Contract 4...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+
+--- Deploying Contract 5 of 5 ---
+✅ Contract 5 deployed to: 0x98A346F40AA9b3c483070EC9cE4a6dE4A6C0d67A
+Configuring 10 pools for Contract 5...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+
+=== Deployment Summary for bscTestnet ===
+Contract 1: 0xEB9CF75B2f032d4cC4A122F814cB73f95618e314
+Contract 2: 0x7CB465aC74B2Feae06cE78e6dC2395a165445353
+Contract 3: 0x3F46E4CD9375B92112EC12c7C5580B522250A77A
+Contract 4: 0xF6e4Db7106593B924b6b93bd3E765d28Fe161F0F
+Contract 5: 0x98A346F40AA9b3c483070EC9cE4a6dE4A6C0d67A

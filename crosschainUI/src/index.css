@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #000000;
+  --color-action-blue: #0066cc;
+}
+
+@layer components {
+  .panel-glass {
+    @apply bg-[#272729]/80 backdrop-blur-xl;
+  }
+  .nav-blur {
+    @apply bg-black/80 backdrop-blur-xl;
+  }
+}
+
+:root {
+  /* Colors - Dark Theme Focus */
+  --color-primary: #0066cc;
+  --color-primary-focus: #0071e3;
+  --color-primary-on-dark: #2997ff;
+  
+  --color-surface-tile-1: #272729;
+  --color-surface-tile-2: #2a2a2c;
+  --color-surface-tile-3: #252527;
+  --color-surface-black: #000000;
+  --color-surface-chip-translucent: rgba(210, 210, 215, 0.2); /* Adjusted for dark mode */
+  
+  --color-on-dark: #ffffff;
+  --color-body-muted: #cccccc;
+  
+  --color-divider-soft: rgba(255, 255, 255, 0.08);
+  --color-hairline: rgba(255, 255, 255, 0.15);
+  
+  /* Typography */
+  --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 17px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 80px;
+
+  /* Border Radius */
+  --rounded-none: 0px;
+  --rounded-xs: 5px;
+  --rounded-sm: 8px;
+  --rounded-md: 11px;
+  --rounded-lg: 18px;
+  --rounded-pill: 9999px;
+  --rounded-full: 9999px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-surface-black);
+  color: var(--color-on-dark);
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.022em; /* -0.374px approx */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-primary-on-dark);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-text);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base Utility Classes */
+.hero-display {
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: -0.005em; /* -0.28px approx */
+}
+
+.display-lg {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.lead {
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.007em; /* 0.196px approx */
+  font-weight: 400;
+}
+
+.tagline {
+  font-size: 21px;
+  line-height: 1.19;
+  letter-spacing: 0.011em; /* 0.231px approx */
+}
+
+.body-strong {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -0.022em;
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.016em; /* -0.224px approx */
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-dark); /* White text on blue */
+  font-size: 17px;
+  border-radius: var(--rounded-pill);
+  padding: 11px 22px;
+}
+
+.button-primary:focus-visible {
+  outline: 2px solid var(--color-primary-focus);
+  outline-offset: 2px;
+}
+
+.button-dark-utility {
+  background-color: var(--color-surface-tile-2);
+  color: var(--color-on-dark);
+  font-size: 14px;
+  border-radius: var(--rounded-sm);
+  padding: 8px 15px;
+}
+
+.store-utility-card {
+  background-color: var(--color-surface-tile-1);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+}
+
+.global-nav {
+  background-color: var(--color-surface-black);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 12px;
+  color: var(--color-on-dark);
+}
+
+.sub-nav-frosted {
+  background-color: rgba(37, 37, 39, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--color-hairline);
+}

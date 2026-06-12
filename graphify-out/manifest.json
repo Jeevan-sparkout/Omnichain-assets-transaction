@@ -30,9 +30,9 @@
     "semantic_hash": "cef390c4f6e33914fa3b24f3633a5d57"
   },
   "/home/sparkout/Desktop/learning/Zetachain/scripts/swap-zeta-to-sol.ts": {
-    "mtime": 1779792578.064506,
-    "ast_hash": "480f4646aab0794b0876ac723478961f",
-    "semantic_hash": "480f4646aab0794b0876ac723478961f"
+    "mtime": 1780209361.78902,
+    "ast_hash": "92875dc5636c7626053b8b4d52bef2f7",
+    "semantic_hash": ""
   },
   "/home/sparkout/Desktop/learning/Zetachain/scripts/test-sol-withdraw-fee.ts": {
     "mtime": 1779792350.0095422,
@@ -150,9 +150,9 @@
     "semantic_hash": "42f82c16bcc574af3643088a732debe6"
   },
   "/home/sparkout/Desktop/learning/Zetachain/scripts/solana-deposit-sol.ts": {
-    "mtime": 1779782367.8069043,
-    "ast_hash": "fbe262185b4df19fce6dba9cb33f461e",
-    "semantic_hash": "fbe262185b4df19fce6dba9cb33f461e"
+    "mtime": 1780207904.146123,
+    "ast_hash": "14058e2d6427fad02ba15c80d246a308",
+    "semantic_hash": ""
   },
   "/home/sparkout/Desktop/learning/Zetachain/scripts/move-sepolia-to-zeta.ts": {
     "mtime": 1777872009.1663797,
@@ -225,9 +225,9 @@
     "semantic_hash": "465327ca1357d1eb80912e72b97ab15c"
   },
   "/home/sparkout/Desktop/learning/Zetachain/scripts/solana-withdraw-sol.ts": {
-    "mtime": 1779790955.950285,
-    "ast_hash": "58a2d48e1fda9ea232e5b6c82919fe9e",
-    "semantic_hash": "58a2d48e1fda9ea232e5b6c82919fe9e"
+    "mtime": 1780207937.9573317,
+    "ast_hash": "4a385fd5d5315df10e076ad4803b7785",
+    "semantic_hash": ""
   },
   "/home/sparkout/Desktop/learning/Zetachain/scripts/check-user-balances.ts": {
     "mtime": 1779788668.2345574,
@@ -370,9 +370,9 @@
     "semantic_hash": "7e2c2b903c542062476eff30c39d4b42"
   },
   "/home/sparkout/Desktop/learning/Zetachain/.gitnexus/parse-cache/b761e90b89477271e6c8f5002f7bf889030309626548f311f3d51ad03023c8f3.json": {
-    "mtime": 1779879090.6753492,
-    "ast_hash": "923c801d65a2d173c24297d3ce3d391f",
-    "semantic_hash": "923c801d65a2d173c24297d3ce3d391f"
+    "mtime": 1779969244.528098,
+    "ast_hash": "42ca54d028ce8725cd373e93833a711e",
+    "semantic_hash": ""
   },
   "/home/sparkout/Desktop/learning/Zetachain/.gitnexus/parse-cache/index.json": {
     "mtime": 1779879090.6763494,
@@ -395,9 +395,9 @@
     "semantic_hash": "e2d6e3faaa7b77b08e9efe3c0f948a03"
   },
   "/home/sparkout/Desktop/learning/Zetachain/AGENTS.md": {
-    "mtime": 1779879090.7173505,
-    "ast_hash": "5167b1bb454ca5e3fbd1310783c9f3cc",
-    "semantic_hash": "5167b1bb454ca5e3fbd1310783c9f3cc"
+    "mtime": 1780979007.1329558,
+    "ast_hash": "0d1f51d6472ddbf1c75ee3eb3cd14bd2",
+    "semantic_hash": ""
   },
   "/home/sparkout/Desktop/learning/Zetachain/.claude/skills/gitnexus/gitnexus-exploring/SKILL.md": {
     "mtime": 1779879090.7193503,
@@ -510,9 +510,9 @@
     "semantic_hash": "eba6943b2a2f6407162ae12e0218bdac"
   },
   "/home/sparkout/Desktop/learning/Zetachain/.specify/memory/constitution.md": {
-    "mtime": 1779879072.8008716,
-    "ast_hash": "dcefb6b60e7cb3db2e966977b6f02f18",
-    "semantic_hash": "dcefb6b60e7cb3db2e966977b6f02f18"
+    "mtime": 1780978929.7930837,
+    "ast_hash": "dcfb06d9d0e929161aaa6cb8c4b0110b",
+    "semantic_hash": ""
   },
   "/home/sparkout/Desktop/learning/Zetachain/.opencode/commands/speckit.constitution.md": {
     "mtime": 1779879072.7098691,
@@ -583,5 +583,190 @@
     "mtime": 1779879072.7318697,
     "ast_hash": "46d517f21e77c5f48ff5a2e56685dbc3",
     "semantic_hash": "46d517f21e77c5f48ff5a2e56685dbc3"
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/deploy_all.sh": {
+    "mtime": 1780922165.7972605,
+    "ast_hash": "b74ee76ffb967e603213490a0c21092c",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/deploy-staking-edge.ts": {
+    "mtime": 1780916599.8594904,
+    "ast_hash": "d72dddd5685cc95d887376d5c3c17422",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/inspect-solana-tx.ts": {
+    "mtime": 1780209907.4344645,
+    "ast_hash": "36b06786089fdf95a7e13e770e5452d3",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/deploy-staking-zevm.ts": {
+    "mtime": 1780916156.7768703,
+    "ast_hash": "7778c5e985adc5646cbfa4b642061ad3",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/reconstruct-revert.ts": {
+    "mtime": 1780209503.5239315,
+    "ast_hash": "75f426951ac55d217c48fadf1ecaf514",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/sepolia-deposit-eth.ts": {
+    "mtime": 1780209177.470072,
+    "ast_hash": "9597baba609c8444a0b4b44b5e75ed5a",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/debug-simulate.ts": {
+    "mtime": 1780915711.15917,
+    "ast_hash": "47a7b425a976dc27fc32f9514a678384",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/deploy-native-zevm.ts": {
+    "mtime": 1780923577.337469,
+    "ast_hash": "79d4aee5ac4049a68b4005d397d07615",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/configure-pools.ts": {
+    "mtime": 1780922504.684303,
+    "ast_hash": "185bf5b0f417897cecc9adcd09c12b47",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/check-sepolia-jp.ts": {
+    "mtime": 1780208415.6076412,
+    "ast_hash": "4050e05448347636268cb1afbc5ce44e",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/move-sepolia-to-solana.ts": {
+    "mtime": 1780208432.7197704,
+    "ast_hash": "3d8b3c9361dd49cfbb751c274ba36c6f",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/swap-eth-to-sol.ts": {
+    "mtime": 1780209243.93786,
+    "ast_hash": "899fb8d0ef652d079bfbb6c6e0ab18e9",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/configure-usdc-pools.ts": {
+    "mtime": 1780920669.9707844,
+    "ast_hash": "c8c3a6786133fcb9c8503d4773b55cf3",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/approve-and-swap.ts": {
+    "mtime": 1780209383.9164376,
+    "ast_hash": "311d6c5715f099c6f347b8df73bc050c",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/scripts/deploy-usdc.ts": {
+    "mtime": 1780920560.0276797,
+    "ast_hash": "53ec9b3a487bc8c9936d683c01c5eb31",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/eslint.config.js": {
+    "mtime": 1780917409.9831972,
+    "ast_hash": "0355276bc79439afe3c53e3a2470ca1e",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/tsconfig.node.json": {
+    "mtime": 1780917409.9861972,
+    "ast_hash": "70bdd0a673bcfc0e828080b306e7c680",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/vite.config.ts": {
+    "mtime": 1780921034.98401,
+    "ast_hash": "8c588e8fa80e033dd8526e3555848465",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/package.json": {
+    "mtime": 1780921056.9215262,
+    "ast_hash": "f05e9c156657d6e45ebbcd73ef11234a",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/tsconfig.app.json": {
+    "mtime": 1780917409.9851973,
+    "ast_hash": "136630b5accce1ca50663df229534a26",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/tsconfig.json": {
+    "mtime": 1780917409.9861972,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/src/config.ts": {
+    "mtime": 1780923921.329123,
+    "ast_hash": "ef906b97c19c03d4fb01bdd4fcff2150",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/src/main.tsx": {
+    "mtime": 1780917409.9851973,
+    "ast_hash": "787e5a07efeb2bf6209d5937195f2f68",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/src/App.tsx": {
+    "mtime": 1780923978.1360736,
+    "ast_hash": "3f217012c1edfacc073935d975f472c7",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/test/CrossChainStaking.test.ts": {
+    "mtime": 1780916551.3785362,
+    "ast_hash": "f3007c0f5d665f41e3583b41a5becc9f",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/test/StakingRouterZEVM.test.ts": {
+    "mtime": 1780916109.1596463,
+    "ast_hash": "53b2f649fbdcfe0f3d05671c5468e414",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/test_output.txt": {
+    "mtime": 1780915690.472609,
+    "ast_hash": "2055971059b975a4be4a22f8ee1d2925",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/Agent_Project_Reference.md": {
+    "mtime": 1780917907.4234524,
+    "ast_hash": "5776396de253df046797f642c8989a61",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/TESTING_VS_ACTUAL_CONFIG.md": {
+    "mtime": 1780921602.2385893,
+    "ast_hash": "538a19c23c9cc663db62761e7f696129",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/PROJECT_STRUCTURE.md": {
+    "mtime": 1780979007.1289556,
+    "ast_hash": "eda4037b2cf8579fc27f19182dc95122",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/index.html": {
+    "mtime": 1780917409.9841971,
+    "ast_hash": "7a417864acd16222e167b939de9bae1b",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/README.md": {
+    "mtime": 1780917409.9831972,
+    "ast_hash": "f6e3faf55d738cf2affe1b44195f27cf",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/src/assets/react.svg": {
+    "mtime": 1780917409.9851973,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/src/assets/vite.svg": {
+    "mtime": 1780917409.9851973,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/src/assets/hero.png": {
+    "mtime": 1780917409.9851973,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/public/icons.svg": {
+    "mtime": 1780917409.9841971,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "/home/sparkout/Desktop/learning/Zetachain/crosschainUI/public/favicon.svg": {
+    "mtime": 1780917409.9841971,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
   }
 }

@@ -22,6 +22,7 @@ const config: HardhatUserConfig = {
       url: process.env.RPC_ZETACHAIN ?? "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
       chainId: 7001,
       accounts,
+      gasPrice: 2000000000,
     },
     baseSepolia: {
       url: process.env.BASE_SEPOLIA_RPC_URL ?? process.env.RPC_BASE_SEPOLIA ?? "",
@@ -37,6 +38,7 @@ const config: HardhatUserConfig = {
       url: process.env.BSC_RPC_URL ?? process.env.RPC_BSC ?? "https://bsc-testnet-rpc.publicnode.com",
       chainId: 97,
       accounts,
+      gasPrice: 15000000000,
     },
   },
   etherscan: {

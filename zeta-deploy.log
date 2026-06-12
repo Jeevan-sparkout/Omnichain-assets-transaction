@@ -1,0 +1,84 @@
+Starting multi-deployment to zetaTestnet...
+Deploying with account: 0x44E6d4e316261D306B020516e4B2849464a10864
+
+--- Deploying Contract 1 of 5 ---
+✅ Contract 1 deployed to: 0xb8543ab22a1bDC321636C5542cB4b7df1b6BCC7C
+Configuring 10 pools for Contract 1...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+  -> Configured ZRC20 routing for cross-chain payouts.
+
+--- Deploying Contract 2 of 5 ---
+✅ Contract 2 deployed to: 0x89a801ff88A30DFF80b2Fee01DEeC43791827C54
+Configuring 10 pools for Contract 2...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+  -> Configured ZRC20 routing for cross-chain payouts.
+
+--- Deploying Contract 3 of 5 ---
+✅ Contract 3 deployed to: 0x09D2Df121c6B85b5536a58Af659E0Fee4a2b3701
+Configuring 10 pools for Contract 3...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+  -> Configured ZRC20 routing for cross-chain payouts.
+
+--- Deploying Contract 4 of 5 ---
+✅ Contract 4 deployed to: 0x79C7aE287Cca853B31B17205cA690f0A7e6831B4
+Configuring 10 pools for Contract 4...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+  -> Configured ZRC20 routing for cross-chain payouts.
+
+--- Deploying Contract 5 of 5 ---
+✅ Contract 5 deployed to: 0xD6E138Fb0cb91a233CE756Be37E4aFE5369D3a51
+Configuring 10 pools for Contract 5...
+  -> Pool 1: APY = 5%, Lock = 60s configured.
+  -> Pool 2: APY = 10%, Lock = 120s configured.
+  -> Pool 3: APY = 15%, Lock = 180s configured.
+  -> Pool 4: APY = 20%, Lock = 240s configured.
+  -> Pool 5: APY = 25%, Lock = 300s configured.
+  -> Pool 6: APY = 30%, Lock = 360s configured.
+  -> Pool 7: APY = 35%, Lock = 420s configured.
+  -> Pool 8: APY = 40%, Lock = 480s configured.
+  -> Pool 9: APY = 45%, Lock = 540s configured.
+  -> Pool 10: APY = 50%, Lock = 600s configured.
+  -> Configured ZRC20 routing for cross-chain payouts.
+
+=== Deployment Summary for zetaTestnet ===
+Contract 1: 0xb8543ab22a1bDC321636C5542cB4b7df1b6BCC7C
+Contract 2: 0x89a801ff88A30DFF80b2Fee01DEeC43791827C54
+Contract 3: 0x09D2Df121c6B85b5536a58Af659E0Fee4a2b3701
+Contract 4: 0x79C7aE287Cca853B31B17205cA690f0A7e6831B4
+Contract 5: 0xD6E138Fb0cb91a233CE756Be37E4aFE5369D3a51

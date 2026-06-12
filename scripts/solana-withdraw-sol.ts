@@ -33,10 +33,6 @@ async function main() {
   const balance = await zrc20.balanceOf(wallet.address);
   console.log(`Current ZRC-20 SOL Balance on ZetaChain: ${ethers.formatUnits(balance, decimals)} SOL`);
 
-  if (balance === 0n) {
-    throw new Error("No ZRC-20 SOL to withdraw. Please deposit SOL first.");
-  }
-
   // Get Solana public key to withdraw to
   const solanaPublicKey = process.env.SOLANA_PUBLIC_KEY;
   if (!solanaPublicKey) {
@@ -51,16 +47,13 @@ async function main() {
   const [gasLimit, gasFee] = await zrc20.withdrawGasFee();
   console.log(`Withdrawal Gas Fee required: ${ethers.formatUnits(gasFee, decimals)} SOL`);
 
-  // Amount to withdraw must cover the gas fee
-  const withdrawAmount = balance; // Let's withdraw the whole balance
-  if (withdrawAmount <= gasFee) {
-    throw new Error(`Balance (${ethers.formatUnits(withdrawAmount, decimals)} SOL) is less than gas fee (${ethers.formatUnits(gasFee, decimals)} SOL)`);
-  }
+  // Set withdraw amount to gas fee + some buffer to trigger actual on-chain withdraw call
+  const withdrawAmount = gasFee + ethers.parseUnits("0.0001", decimals);
 
-  console.log(`\nWithdrawing ${ethers.formatUnits(withdrawAmount, decimals)} ZRC-20 SOL...`);
-  console.log(`(Net received on Solana: ${ethers.formatUnits(withdrawAmount - gasFee, decimals)} SOL)`);
+  console.log(`\nInitiating actual on-chain ZRC-20 withdraw of ${ethers.formatUnits(withdrawAmount, decimals)} SOL...`);
 
-  const tx = await zrc20.withdraw(toAddressBytes, withdrawAmount);
+  console.log("Sending actual on-chain withdraw transaction (with manual gas limit to bypass estimateGas)...");
+  const tx = await zrc20.withdraw(toAddressBytes, withdrawAmount, { gasLimit: 150000 });
   console.log(`Transaction sent! TX Hash: ${tx.hash}`);
   console.log("Waiting for confirmation...");
   await tx.wait();

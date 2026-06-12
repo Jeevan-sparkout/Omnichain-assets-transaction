@@ -16,8 +16,10 @@ async function main() {
   const solZrc20Address = "0xADF73ebA3Ebaa7254E859549A44c74eF7cff7501";
 
   const wzetaAbi = [
+    "function deposit() external payable",
+    "function approve(address spender, uint256 amount) external returns (bool)",
     "function balanceOf(address) external view returns (uint256)",
-    "function allowance(address owner, address spender) view returns (uint256)"
+    "function allowance(address owner, address spender) external view returns (uint256)"
   ];
 
   const routerAbi = [
@@ -28,47 +30,57 @@ async function main() {
   const router = new ethers.Contract(routerAddress, routerAbi, wallet);
 
   console.log("=========================================");
-  console.log("🔄 Swapping WZETA to SOL ZRC-20");
+  console.log("🔄 Performing ZETA -> WZETA -> ZRC-20 SOL Swap");
   console.log(`Wallet: ${wallet.address}`);
   console.log("=========================================");
 
-  const wzetaBalance = await wzeta.balanceOf(wallet.address);
-  const routerAllowance = await wzeta.allowance(wallet.address, routerAddress);
+  // Swap 0.0005 WZETA (very safe small amount)
+  const amountIn = ethers.parseEther("0.0005");
 
-  console.log(`WZETA Balance: ${ethers.formatEther(wzetaBalance)} WZETA`);
-  console.log(`Router Allowance: ${ethers.formatEther(routerAllowance)} WZETA`);
-
-  const amountIn = ethers.parseEther("0.001");
-
-  if (wzetaBalance < amountIn) {
-    throw new Error("Insufficient WZETA balance");
+  // Step 1: Wrap ZETA to WZETA
+  const wzetaBal = await wzeta.balanceOf(wallet.address);
+  console.log(`Current WZETA Balance: ${ethers.formatEther(wzetaBal)} WZETA`);
+  if (wzetaBal < amountIn) {
+    const depositAmt = ethers.parseEther("0.01");
+    console.log(`Wrapping ${ethers.formatEther(depositAmt)} native ZETA...`);
+    const depTx = await wzeta.deposit({ value: depositAmt });
+    console.log(`Wrap sent: ${depTx.hash}`);
+    await depTx.wait();
+    console.log(`Wrapped successfully!`);
   }
 
-  if (routerAllowance < amountIn) {
-    throw new Error("Insufficient Router allowance");
+  // Step 2: Approve WZETA if needed
+  const allowance = await wzeta.allowance(wallet.address, routerAddress);
+  console.log(`Current WZETA Allowance for Router: ${ethers.formatEther(allowance)} WZETA`);
+  if (allowance < amountIn) {
+    const approveAmt = ethers.parseEther("1.0");
+    console.log(`Approving ${ethers.formatEther(approveAmt)} WZETA to Router...`);
+    const appTx = await wzeta.approve(routerAddress, approveAmt);
+    console.log(`Approve sent: ${appTx.hash}`);
+    await appTx.wait();
+    console.log("Router approved!");
   }
 
+  // Step 3: Swap
+  console.log("Swapping WZETA for ZRC-20 SOL on-chain...");
   const path = [wzetaAddress, solZrc20Address];
-  const deadline = Math.floor(Date.now() / 1000) + 60 * 10; // 10 min
+  const deadline = Math.floor(Date.now() / 1000) + 60 * 10;
 
-  console.log(`Executing swap of ${ethers.formatEther(amountIn)} WZETA for SOL...`);
-  const tx = await router.swapExactTokensForTokens(
-    amountIn,
-    0,
-    path,
-    wallet.address,
-    deadline,
-    { gasLimit: 500000 }
-  );
-
-  console.log(`Swap transaction sent: ${tx.hash}`);
-  console.log("Waiting for confirmation...");
-  const receipt = await tx.wait();
-  
-  if (receipt.status === 1) {
-    console.log("🎉 SUCCESS! Native ZETA to SOL swap executed successfully on-chain!");
-  } else {
-    console.log("❌ Transaction reverted on-chain!");
+  try {
+    const tx = await router.swapExactTokensForTokens(
+      amountIn,
+      0,
+      path,
+      wallet.address,
+      deadline,
+      { gasLimit: 300000 }
+    );
+    console.log(`Swap Tx Hash: ${tx.hash}`);
+    console.log("Waiting for confirmation...");
+    const receipt = await tx.wait();
+    console.log(`🎉 Swap Success! Status: ${receipt.status}`);
+  } catch (e: any) {
+    console.error("❌ Swap Failed!", e);
   }
 }
 
